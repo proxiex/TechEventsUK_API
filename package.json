@@ -1,0 +1,32 @@
+{
+  "name": "tech-events-uk-api",
+  "version": "1.0.0",
+  "description": "An application that allows people to easily discover events that match their interests.",
+  "main": "index.js",
+  "repository": "git@github.com:proxiex/TechEventsUK_API.git",
+  "author": "proxiex <difrentecho@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run build && node ./build",
+    "prod": "node ./build",
+    "build": "babel ./server -d ./build --copy-files",
+    "dev": "nodemon --watch ./server --exec babel-node -- ./server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-node": "^0.0.1-security",
+    "nodemon": "^2.0.15"
+  }
+}
